@@ -6,12 +6,12 @@ try:
     headers = { 'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64)\
                 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101\
                 Safari/537.36', }
-    url = 'https://www.ntu.edu.tw/'
+    url = 'https://www.ptt.cc/bbs/Stock/index.html'
     htmlfile = requests.get(url, headers=headers)
     print("偽裝瀏覽器擷取網路資料成功")
     print(htmlfile.text)
 
-    fn = 'ntu.html'
+    fn = 'ptt.html'
     with open(fn, 'wb') as file_Obj:                        # 以二進位儲存
         for diskStorage in htmlfile.iter_content(10240): # Response物件處理
             size = file_Obj.write(diskStorage)           # Response物件寫入
